@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Prompt Generator</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">✦ PromptCraft</div>
+            <span class="header-tag">AI PROMPT BUILDER</span>
+        </header>
+
+        <!-- Main content -->
+        <main class="main-content">
+
+            <section class="hero">
+                <div class="hero-badge">
+                    ✨ Smart Prompt Generator
+                </div>
+
+                <h1>
+                    Turn your ideas into
+                    <span>powerful prompts.</span>
+                </h1>
+
+                <p>
+                    Create clear and effective AI prompts for
+                    assignments, projects, coding and learning.
+                </p>
+            </section>
+
+            <div class="workspace">
+
+                <!-- Input section -->
+                <section class="input-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Build your prompt</h2>
+                            <p>Fill in the details below.</p>
+                        </div>
+
+                        <span class="step-label">01 / INPUT</span>
+                    </div>
+
+                    <form id="promptForm">
+
+                        <!-- Role -->
+                        <div class="form-group">
+                            <label for="role">
+                                <span class="field-number">01</span>
+                                Role
+                            </label>
+
+                            <input
+                                type="text"
+                                id="role"
+                                placeholder="e.g. Act as a computer science teacher"
+                            >
+                        </div>
+
+                        <!-- Task -->
+                        <div class="form-group">
+                            <label for="task">
+                                <span class="field-number">02</span>
+                                Task
+                                <span class="required">*</span>
+                            </label>
+
+                            <textarea
+                                id="task"
+                                rows="3"
+                                placeholder="What do you want the AI to do?"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <!-- Context -->
+                        <div class="form-group">
+                            <label for="context">
+                                <span class="field-number">03</span>
+                                Context
+                            </label>
+
+                            <textarea
+                                id="context"
+                                rows="3"
+                                placeholder="Provide background information..."
+                            ></textarea>
+                        </div>
+
+                        <!-- Constraints -->
+                        <div class="form-group">
+                            <label for="constraints">
+                                <span class="field-number">04</span>
+                                Constraints
+                            </label>
+
+                            <textarea
+                                id="constraints"
+                                rows="3"
+                                placeholder="e.g. Use simple English, maximum 300 words"
+                            ></textarea>
+                        </div>
+
+                        <!-- Output format -->
+                        <div class="form-group">
+                            <label for="format">
+                                <span class="field-number">05</span>
+                                Output Format
+                            </label>
+
+                            <select id="format">
+                                <option value="">Choose output format</option>
+                                <option value="Bullet points">Bullet points</option>
+                                <option value="Paragraph">Paragraph</option>
+                                <option value="Step-by-step guide">
+                                    Step-by-step guide
+                                </option>
+                                <option value="Table">Table</option>
+                                <option value="HTML code">HTML code</option>
+                                <option value="Python code">Python code</option>
+                                <option value="JSON">JSON</option>
+                            </select>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="button-group">
+                            <button type="submit" class="generate-btn">
+                                ✦ Generate Prompt
+                            </button>
+
+                            <button
+                                type="button"
+                                id="clearBtn"
+                                class="clear-btn"
+                            >
+                                Clear
+                            </button>
+                        </div>
+
+                    </form>
+                </section>
+
+                <!-- Output section -->
+                <section class="output-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Your generated prompt</h2>
+                            <p>Ready to use with your AI assistant.</p>
+                        </div>
+
+                        <span class="step-label">02 / OUTPUT</span>
+                    </div>
+
+                    <div class="output-box">
+                        <div class="output-top">
+                            <span class="output-dot"></span>
+                            <span class="output-dot"></span>
+                            <span class="output-dot"></span>
+
+                            <span class="output-title">Generated Prompt</span>
+                        </div>
+
+                        <textarea
+                            id="output"
+                            placeholder="Your generated prompt will appear here..."
+                            readonly
+                        ></textarea>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="copyBtn"
+                        class="copy-btn"
+                    >
+                        📋 Copy Prompt
+                    </button>
+
+                    <p id="message" class="message"></p>
+
+                    <!-- Sample prompt -->
+                    <div class="sample-box">
+                        <div class="sample-heading">
+                            <span>💡</span>
+                            <h3>Sample Prompt</h3>
+                        </div>
+
+                        <p>
+                            Act as a computer science teacher.
+                            Explain computer networks to first-year
+                            college students using simple English.
+                            Include real-world examples and
+                            three important uses.
+                            Present the answer in bullet points.
+                        </p>
+
+                        <button
+                            type="button"
+                            id="sampleBtn"
+                            class="sample-btn"
+                        >
+                            Use Sample
+                        </button>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <footer>
+                Made for students, powered by creativity.
+                <span>✦</span>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <!-- Connect JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
